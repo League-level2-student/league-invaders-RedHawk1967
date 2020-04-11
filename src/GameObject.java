@@ -12,14 +12,14 @@ public class GameObject {
 	 int speed = 0;
 	 boolean isActive = true;
 
-	 public GameObject(int xinfo,int yinfo, int widthinfo, int heightinfo) {
+	 public GameObject(int xinfo,int yinfo, int widthinfo, int heightinfo, int speedinfo) {
 
 	
-	 int x = xinfo;
-	 int y = yinfo;
-	 int width = widthinfo;
-	 int  height = heightinfo;
-	 
+	 x = xinfo;
+	  y = yinfo;
+	  width = widthinfo;
+	   height = heightinfo;
+	   speed = speedinfo;
 	 
 	 
 	 }

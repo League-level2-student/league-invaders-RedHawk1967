@@ -82,7 +82,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 
-		System.out.println("action");
+		
 		repaint();
 
 		if (currentState == MENU) {
@@ -112,17 +112,18 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		}
 		if (currentState == GAME) {
 
-			if (e.getKeyCode() == KeyEvent.VK_UP) {
-				System.out.println("UP");
+			if (e.getKeyCode() == KeyEvent.VK_UP && rocket.y > 20){
+				
+				rocket.up();
 			}
-			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-				System.out.println("DOWN");
+			if (e.getKeyCode() == KeyEvent.VK_DOWN && rocket.y < 720) {
+				rocket.down();
 			}
-			if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-				System.out.println("LEFT");
+			if (e.getKeyCode() == KeyEvent.VK_LEFT && rocket.x > 20) {
+				rocket.left();
 			}
-			if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-				System.out.println("RIGHT");
+			if (e.getKeyCode() == KeyEvent.VK_RIGHT && rocket.x < 420) {
+				rocket.right();	
 			}
 		}
 
