@@ -15,7 +15,7 @@ public class ObjectManager implements ActionListener {
 		this.rocket = rocketinfo;
 	}
 
-	private void addProjecti(Projectile proinfo) {
+	void addProjectile(Projectile proinfo) {
 		projectiles.add(proinfo);
 
 	}
@@ -79,7 +79,7 @@ for (int i = 0; i < projectiles.size(); i++) {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	
+	addAlien();
 }
 
 

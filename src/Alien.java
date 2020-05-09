@@ -25,7 +25,7 @@ public class Alien extends GameObject {
 		super(xinfo, yinfo, widthinfo, heightinfo, 1);
 		// TODO Auto-generated constructor stub
 		if (needImage) {
-		    loadImage ("rocket.png");
+		    loadImage ("alien.png");
 		}
 	
 	}

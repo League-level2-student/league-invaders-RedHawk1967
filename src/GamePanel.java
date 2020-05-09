@@ -13,12 +13,19 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
+	Timer alienSpawn;
 	Font smallFont;
 	Font titleFont;
 	Timer frameDraw;
 	Rocketship rocket = new Rocketship(250,700,50,50);
 ObjectManager obmanager = new ObjectManager(rocket);
 private BufferedImage space;	
+
+void startGame() {
+	 alienSpawn = new Timer(1000,obmanager );
+	 alienSpawn.start();
+}
+
 public GamePanel() {
 		titleFont = new Font("Arial", Font.PLAIN, 48);
 		smallFont = new Font("Arial", Font.PLAIN, 25);
@@ -115,12 +122,21 @@ public GamePanel() {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
+	if (currentState == GAME && e.getKeyCode() == KeyEvent.VK_SPACE) {
+		
+		obmanager.addProjectile(rocket.getProjectile());
+	}
+		
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			if (currentState == END) {
 				currentState = MENU;
-			} else {
+			} else if (currentState == MENU) {
+				currentState = GAME; startGame();
+			}else {
 				currentState++;
 			}
+				
+			
 		}
 		if (currentState == GAME) {
 
