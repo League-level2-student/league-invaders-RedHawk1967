@@ -42,7 +42,7 @@ public class ObjectManager implements ActionListener {
 				projectiles.get(j).isActive = false;
 			}
 		}
-
+checkCollision();
 	}
 
 	public void draw(Graphics g) {
@@ -60,7 +60,21 @@ public class ObjectManager implements ActionListener {
 		}
 	}
 
+private void checkCollision() {
+ for (Alien alien : aliens) {
+	 if (rocket.collisionBox.intersects(alien.collisionBox)) {
+		alien.isActive = false;
+		
+	 }
+}
 
+for (Projectile projectile : projectiles) {
+	if (rocket.collisionBox.intersects(projectile.collisionBox)) {
+		projectile.isActive = false;
+	}
+}
+
+}
 
 
 private void purgeObjects() {
