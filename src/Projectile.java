@@ -26,7 +26,7 @@ public class Projectile extends GameObject {
 		super(xinfo, yinfo, widthinfo, heightinfo, 10);
 		// TODO Auto-generated constructor stub
 		if (needImage) {
-		    loadImage ("rocket.png");
+		    loadImage ("bullet.png");
 		}
 	}
 

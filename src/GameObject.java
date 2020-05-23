@@ -11,7 +11,7 @@ Rectangle collisionBox;
 	 int width;
 	 int height;
 	 int speed = 0;
-	 boolean isActive = true;
+	  boolean isActive = true;
 
 	 public GameObject(int xinfo,int yinfo, int widthinfo, int heightinfo, int speedinfo) {
 

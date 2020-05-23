@@ -57,6 +57,9 @@ public GamePanel() {
 
 	void updateGameState() {
 	obmanager.update();
+	if (rocket.isActive == false) {
+		currentState = END;
+	}
 	}
 
 	void updateEndState() {
