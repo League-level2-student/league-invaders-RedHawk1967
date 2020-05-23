@@ -10,7 +10,8 @@ public class ObjectManager implements ActionListener {
 	Rocketship rocket;
 	ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 	ArrayList<Alien> aliens = new ArrayList<Alien>();
-
+	int score = 0;
+	
 	public ObjectManager(Rocketship rocketinfo) {
 		this.rocket = rocketinfo;
 	}
@@ -91,12 +92,6 @@ for (int i = 0; i < projectiles.size(); i++) {
 	}
 }
 
-for (int i = 0; i < 1; i++) {
-	if (rocket.isActive == false) {
-		
-		
-	}
-}
 
 
 
