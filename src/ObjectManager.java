@@ -12,6 +12,10 @@ public class ObjectManager implements ActionListener {
 	ArrayList<Alien> aliens = new ArrayList<Alien>();
 	int score = 0;
 	
+	public int getScore() {
+		return score;
+	} 
+	
 	public ObjectManager(Rocketship rocketinfo) {
 		this.rocket = rocketinfo;
 	}

@@ -83,9 +83,9 @@ public GamePanel() {
 			e.printStackTrace();
 		}
 		g.drawImage(space,0,0,null);
-	
+		g.drawString(String.ValueOf(getScore()), 50, 300);
 		obmanager.draw(g);
-	
+		
 	}
 
 	void drawEndState(Graphics g) {
