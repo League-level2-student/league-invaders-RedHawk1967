@@ -9,10 +9,13 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
+	JLabel score;
+	
 	Timer alienSpawn;
 	Font smallFont;
 	Font titleFont;
@@ -83,7 +86,11 @@ public GamePanel() {
 			e.printStackTrace();
 		}
 		g.drawImage(space,0,0,null);
-		g.drawString(String.ValueOf(getScore()), 50, 300);
+		g.drawString("Score:"+ obmanager.getScore(), 250, 100);
+
+		
+		
+		
 		obmanager.draw(g);
 		
 	}
@@ -133,6 +140,7 @@ public GamePanel() {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			if (currentState == END) {
 				currentState = MENU;
+				rocket.draw(getGraphics());
 			} else if (currentState == MENU) {
 				currentState = GAME; startGame();
 			}else {
